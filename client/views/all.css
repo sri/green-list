@@ -1,0 +1,33 @@
+/* CSS declarations go here */
+.purchased {
+  text-decoration: line-through;
+}
+.list-group {
+  cursor: pointer;
+}
+.item .badge, .shopping-item .badge {
+  background-color: inherit;
+}
+.remove {
+  color: #a94442;
+  display: none;
+}
+.item:hover .remove, .shopping-item:hover .remove {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}
+.clear-search {
+  background-color: #eee;
+}
+.item, .shopping-item {
+  height: 52px;
+  padding-top: 15px;
+}
+.green-list {
+  color: #3c763d;
+  background-color: #dff0d8;
+  font-weight: bold;
+}

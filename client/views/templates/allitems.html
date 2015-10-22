@@ -1,0 +1,29 @@
+<template name="allitems">
+  <div class="input-group">
+    <input type="text" id="search" class="form-control" autocomplete="off"
+           spellcheck="off" autocapitalize="off" autocorrect="off"
+          placeholder="Item name (use commas to enter multiple items)" autofocus />
+    <span class="input-group-btn">
+      <button class="btn btn-default clear-search hidden" type="button">
+        <span class="glyphicon glyphicon-remove-sign"></span>
+      </button>
+      <button class="btn btn-primary add-item" type="button">
+        <span class="glyphicon glyphicon-plus-sign"></span> Add Item(s)
+      </button>
+    </span>
+  </div>
+
+  <br/>
+  <ul class="list-group" id="allitems">
+    {{#if currentUser}}
+      {{#each items}}
+        <li class="list-group-item item" data-name="{{name}}" data-id="{{_id}}">
+          <span class="badge">
+            <span class="glyphicon glyphicon-remove remove"></span>
+          </span>
+          {{name}}
+        </li>
+      {{/each}}
+    {{/if}}
+  </ul>
+</template>
