@@ -5,4 +5,4 @@ See http://green-list.meteor.com to see it in action
 
 Screenshot:
 
-https://raw.githubusercontent.com/sri/green-list/master/screenshots/dashboard.png
+![Dashboard](https://raw.githubusercontent.com/sri/green-list/master/screenshots/dashboard.png?raw=true "Dashboard")
