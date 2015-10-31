@@ -1,11 +1,11 @@
-# green-list
+# grocery-list
 a simple, mobile-friendly grocery shopping list
 
 Visit http://green-list.meteor.com to see it in action.
 
 ## Screenshot:
 
-![Dashboard](https://raw.githubusercontent.com/sri/green-list/master/screenshots/dashboard.png?raw=true "Dashboard")
+![Dashboard](https://raw.githubusercontent.com/sri/grocery-list/master/screenshots/dashboard.png?raw=true "Dashboard")
 
 ## Why?
 
@@ -13,11 +13,11 @@ Visit http://green-list.meteor.com to see it in action.
 * Previously, I used Trello. Here is how I had to mark things on Trello's mobile app:
   * Click on the item and wait for about half-a-second for it to "attach" itself to your touch
   * Drag it to the Archive area or to another list.
-* With green-list:
+* With grocery-list:
   * Touch the item and it is marked as purchased
 
 ### Problem #2: What should I buy at the grocery store?
-With green-list, you add items to your "All Items" list.
+With grocery-list, you add items to your "All Items" list.
 
 You can quickly search and/or scan that list to remind yourself of the things that you might need. And with a touch/click, you can add items to the shopping list.
 
