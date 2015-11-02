@@ -1,15 +1,31 @@
 Template.allitems.helpers({
-  items: function() {
+  items() {
     let userId = Meteor.userId();
     if (!userId) {
       return null;
     }
     return Items.find({userId}, {sort: {name: 1}});
+  },
+
+  lastPurchased(purchasedOn) {
+    if (!purchasedOn) {
+      return "";
+    }
+    let measurements = [
+      "years", "months", "weeks"
+    ];
+    for (let m of measurements) {
+      let diff = moment().diff(purchasedOn, m);
+      if (diff > 0) {
+        return diff + " " + m;
+      }
+    }
+    return "";
   }
 });
 
 Template.allitems.events({
-  'click .remove': function(event) {
+  'click .remove'(event) {
     let userId = Meteor.userId();
     if (!userId) {
       return false;

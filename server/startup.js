@@ -20,6 +20,9 @@ Meteor.startup(() => {
     },
     remove(userId, item) {
       return userId === item.userId;
+    },
+    update(userId, item) {
+      return userId === item.userId;
     }
   });
 
@@ -32,12 +35,6 @@ Meteor.startup(() => {
     },
     remove(userId, shoppingListItem) {
       return userId === shoppingListItem.userId;
-    }
-  });
-
-  ShoppingHistory.allow({
-    insert() {
-      return Meteor.userId() !== null;
     }
   });
 });

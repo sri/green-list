@@ -17,7 +17,10 @@ Template.shoppinglist.events({
     }
 
     ShoppingList.find({userId, purchased: true}).forEach((sl) => {
-      ShoppingHistory.insert({userId, name: sl.name, purchasedOn: sl.purchasedOn});
+      let item = Items.findOne({name: sl.name});
+      if (item) {
+        Items.update(item._id, {$set: {purchasedOn: sl.purchasedOn}});
+      }
       ShoppingList.remove(sl._id);
     });
   },
