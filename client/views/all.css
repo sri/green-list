@@ -34,5 +34,5 @@
 .purchased-on {
   color: #666;
   font-size: 82%;
-  text-decoration: underline;
+  float: right;
 }

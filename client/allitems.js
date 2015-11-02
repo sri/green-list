@@ -11,13 +11,15 @@ Template.allitems.helpers({
     if (!purchasedOn) {
       return "";
     }
+    // From http://momentjs.com/docs/#/displaying/difference/
     let measurements = [
-      "years", "months", "weeks"
+      "years", "months", "weeks", "days", "hours"
     ];
     for (let m of measurements) {
       let diff = moment().diff(purchasedOn, m);
       if (diff > 0) {
-        return diff + " " + m;
+        m = m.replace(/s$/, "");
+        return `${diff} ${m} ago`;
       }
     }
     return "";
