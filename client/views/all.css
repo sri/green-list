@@ -9,8 +9,7 @@
   background-color: inherit;
 }
 .remove {
-  color: #a94442;
-  display: none;
+  color: #eee;
 }
 .item:hover .remove, .shopping-item:hover .remove {
   display: inline;
