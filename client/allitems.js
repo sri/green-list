@@ -58,6 +58,7 @@ Template.allitems.events({
         continue;
       }
       Items.insert({userId, name});
+      ShoppingList.insert({userId, name});
     }
 
     $("#search").val("");
