@@ -1,7 +1,10 @@
 <template name="shoppinglist">
   <ul class="list-group">
     {{#if currentUser}}
-      {{#each items}}
+      <li class="list-group-item list-group-item-warning">
+        <b>Remaining</b>
+      </li>
+      {{#each remainingItems}}
         <li class="list-group-item shopping-item {{#if purchased}}purchased list-group-item-success{{/if}}"
             data-id="{{_id}}" data-name="{{name}}">
           <span class="badge">
@@ -10,10 +13,22 @@
           {{name}}
         </li>
       {{/each}}
+      <li class="list-group-item list-group-item-warning">
+        <b>Just Purchased</b>
+      </li>
+      {{#each purchasedItems}}
+        <li class="list-group-item shopping-item {{#if purchased}}purchased list-group-item-success{{/if}}"
+            data-id="{{_id}}" data-name="{{name}}">
+          <span class="badge">
+            <span class="glyphicon glyphicon-remove remove"></span>
+          </span>
+          {{name}}
+        </li>
+      {{/each}}
+      <li class="list-group-item active archive-purchased">
+        <span class="glyphicon glyphicon-folder-close"></span>
+        &nbsp;Remove Purchased
+      </li>
     {{/if}}
-    <li class="list-group-item active archive-purchased">
-      <span class="glyphicon glyphicon-folder-close"></span>
-      &nbsp;Remove Purchased
-    </li>
   </ul>
 </template>
