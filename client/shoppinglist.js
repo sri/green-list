@@ -5,7 +5,7 @@ Template.shoppinglist.helpers({
       return false;
     }
 
-    return ShoppingList.find({userId, purchased: undefined}, {sort: {name: 1}});
+    return ShoppingList.find({userId, purchased: false}, {sort: {name: 1}});
   },
   purchasedItems() {
     let userId = Meteor.userId();

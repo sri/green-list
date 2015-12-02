@@ -58,7 +58,7 @@ Template.allitems.events({
         continue;
       }
       Items.insert({userId, name});
-      ShoppingList.insert({userId, name});
+      ShoppingList.insert({userId, name, purchased: false});
     }
 
     $("#search").val("");
@@ -120,7 +120,7 @@ Template.allitems.events({
     } else if (existing) {
       ShoppingList.update(existing._id, {$set: {purchased: false, purchasedOn: null}});
     } else {
-      ShoppingList.insert({userId, name});
+      ShoppingList.insert({userId, name, purchased: false});
     }
   }
 });
