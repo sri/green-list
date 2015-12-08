@@ -4,8 +4,6 @@
 </head>
 
 <body>
-  {{> loginButtons}}
-
   <div class="container col-sm-8">
     {{#if currentUser}}
       {{> tabheaders}}
@@ -41,8 +39,16 @@
              It is open-source and available on Github:
              <a href="https://github.com/sri/grocery-list" target="_blank">github.com/sri/grocery-list</a>
           </p>
+          <p>
+            {{> loginButtons}}
+          </p>
         </div>
       </div>
     {{/if}}
   </div>
+
+  {{#if currentUser}}
+    {{> loginButtons}}
+  {{/if}}
+
 </body>
