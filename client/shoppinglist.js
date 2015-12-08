@@ -1,19 +1,11 @@
 Template.shoppinglist.helpers({
-  remainingItems() {
+  items() {
     let userId = Meteor.userId();
     if (!userId) {
       return false;
     }
 
-    return ShoppingList.find({userId, purchased: false}, {sort: {name: 1}});
-  },
-  purchasedItems() {
-    let userId = Meteor.userId();
-    if (!userId) {
-      return false;
-    }
-
-    return ShoppingList.find({userId, purchased: true}, {sort: {name: 1}});
+    return ShoppingList.find({userId}, {sort: {name: 1}});
   }
 });
 
