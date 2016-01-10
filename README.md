@@ -1,5 +1,6 @@
 # grocery-list
-a simple, mobile-friendly grocery shopping list
+a simple, mobile-friendly, real-time grocery shopping list
+(I've been using this since Nov 2015)
 
 Visit http://green-list.meteor.com to see it in action.
 
